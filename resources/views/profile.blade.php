@@ -27,14 +27,16 @@
             text-align: center;
             width: 400px;
         }
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            background: url('https://cdn-icons-png.flaticon.com/512/149/149071.png') no-repeat center;
-            background-size: cover;
-            margin: 0 auto 20px;
-            border: 6px solidrgb(191, 90, 151);
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: url('https://cdn-icons-png.flaticon.com/512/149/149071.png') no-repeat center;
+    background-size: cover;
+    margin: 0 auto 20px;
+    border: 6px solid rgb(191, 90, 151);
+}
+
         }
         .profile-info {
             width: 100%;
@@ -52,10 +54,13 @@
 <body>
 
     <div class="profile-card">
-        <div class="profile-img"></div>
-        <div class="profile-info">Nama: {{ $nama }}</div>
-        <div class="profile-info">Kelas: {{ $kelas }}</div>
-        <div class="profile-info">NPM: {{ $npm }}</div>
+<div class="profile-img">
+    <img src="{{ asset('Images/profile.jpg') }}" alt="Foto Profil">
+</div>
+<div class="profile-info">Nama: {{ $nama }}</div>
+<div class="profile-info">Kelas: {{ $kelas }}</div>
+<div class="profile-info">NPM: {{ $npm }}</div>
+
     </div>
 
 </body>

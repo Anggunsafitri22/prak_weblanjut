@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    public function create(){
+
+        return view('create_user');
+    }
+
+    public function store(Request $request)
+    {
+        $data = [
+            'nama' => $request->input('nama'),
+            'kelas' => $request->input('kelas'),
+            'npm' => $request->input('npm'),
+            'foto' => 'images/Foto.jpg' // Path foto default
+        ];
+    
+        return view('profile', $data);
+    }
+}    
